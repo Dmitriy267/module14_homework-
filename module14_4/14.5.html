@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+    <head>
+ <meta charset="utf-8">
+       <title>кнопки и поля ввода</title>
+       <link rel="stylesheet" href="">
+        
+        <script>
+           function mylocalStorage(){
+       let userName=prompt('Добро пожаловать! Назовите, пожалуйста, ваше имя','');
+        
+               let userData=localStorage.getItem('userDatakey');
+            if(localStorage.getItem('userkey')===userName){
+               alert(`Добрый день, ${userName}! Давно не виделись. В последний раз вы были у нас ${userData}`);  
+          localStorage.setItem('userDatakey',new Date());
+               
+               }else{
+                   localStorage.setItem('userkey',userName);
+                   localStorage.setItem('userDatakey',new Date());
+               }
+            };
+            mylocalStorage();
+
+        </script>
+    </head>
+    <body>
+      
+    </body>
+</html>
